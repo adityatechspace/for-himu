@@ -33,7 +33,7 @@ function sendLove(type){
   },1100);
 }
 // Adi's number, international format, no + or spaces.
-const ADI_PHONE = "918102256694";
+const ADI_PHONE = "";
 
 function notifyAdi(type){
   const message = type==='hug'
