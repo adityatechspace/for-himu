@@ -1,389 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>For My Love ✨</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Himu ♡</title>
+<meta name="description" content="A tiny universe made with love for Himanshi.">
 </head>
-
 <body>
+<nav><div class="logo">Aditya ♡ Himanshi</div><div class="links">
+<a href="#home">Home</a><a href="#love">For You</a><a href="#games">Games</a><a href="#notes">Love Notes</a><a href="#little">Little Things</a>
+</div><button class="menu" onclick="document.querySelector('.links').classList.toggle('mobile-open')" aria-label="Open menu">☰</button></nav>
 
-<div class="progress-bar">
-  <div class="progress-fill" id="progressFill"></div>
+<header id="home" class="hero">
+<div class="hero-media">
+<img class="hero-img" src="romance-hero.png" alt="Aditya and Himanshi under a starry sky, Gujarat and Bihar connected by a glowing heart trail">
+<div class="hero-fade"></div>
 </div>
-
-<!-- Welcome -->
-
-<div class="screen active" id="welcomeScreen">
-
-  <div class="glass">
-
-    <h1>Welcome</h1>
-
-    <p>
-      A small interactive journey was made for Himanshi.
-    </p>
-
-    <button onclick="openTyping()">
-      Begin →
-    </button>
-
-  </div>
-
+<div class="wrap hero-cta">
+<span class="eyebrow">A tiny corner of the internet, made for you</span>
+<p>Whenever you need a little softness, come here. A tiny place made to remind you that you are loved, appreciated, and never alone.</p>
+<button class="btn" onclick="document.querySelector('#love').scrollIntoView({behavior:'smooth'})">Come a little closer ♡</button>
 </div>
-
-<!-- Typing -->
-
-<div class="screen" id="typingScreen">
-
-  <div class="typing-box">
-
-    <div class="typing-text" id="typingText"></div>
-
-    <button id="typingBtn"
-      style="display:none;margin-top:40px;"
-      onclick="openCards()">
-
-      Continue
-
-    </button>
-
-  </div>
-
+</header>
+<div class="counter-bar"><div class="wrap">
+<small>It's been since we met</small>
+<div class="digits">
+<div><b id="days">0</b><span>Days</span></div><div><b id="hours">0</b><span>Hours</span></div><div><b id="mins">0</b><span>Minutes</span></div><div><b id="secs">0</b><span>Seconds</span></div>
 </div>
+<div class="metnote">24th August 2026 — and many beautiful moments still to come ♡</div>
+</div></div>
 
-<!-- Cards -->
-
-<div class="screen" id="cardScreen">
-
-  <h1 class="title">Himanshi ✨</h1>
-
-  <p class="subtitle">
-    Some thoughts worth exploring.
-  </p>
-
-  <div class="card-area" id="cardArea"></div>
-
-  <button id="cardBtn"
-    style="display:none;margin-top:25px;"
-    onclick="openPaths()">
-
-    Continue
-
-  </button>
-
+<section class="section live-section"><div class="wrap">
+<div class="title reveal"><div class="eyebrow" style="color:#e34f85">A little time together</div><h2>Right now, somewhere under the same sky 🌙</h2><p>This part is live, so it keeps changing every second.</p></div>
+<div class="live-grid">
+<div class="live-card reveal"><span>🕰️</span><h3>Current time</h3><strong id="clock">--:--:--</strong><small id="today">Loading date...</small></div>
+<div class="live-card reveal"><span>💗</span><h3>Since we met</h3><strong id="since">-- days</strong><small>24 August 2026</small></div>
 </div>
-
-<!-- Paths -->
-
-<div class="screen" id="pathScreen">
-
-  <h1 class="title">Choose a Path</h1>
-
-  <p class="subtitle">
-    Pick something interesting.
-  </p>
-
-  <div class="path-grid">
-
-    <div class="path-card"
-      onclick="openArrowGame()">
-
-      <div class="path-icon">🎮</div>
-
-      <h3>Arrow Challenge</h3>
-
-    </div>
-
-    <div class="path-card"
-      onclick="openMemoryGame()">
-
-      <div class="path-icon">🧠</div>
-
-      <h3>Memory Lights</h3>
-
-    </div>
-
-    <div class="path-card"
-      onclick="openStarGame()">
-
-      <div class="path-icon">⭐</div>
-
-      <h3>Hidden Surprise</h3>
-
-    </div>
-
-    <div class="path-card"
-      onclick="openHeartRestore()">
-
-      <div class="path-icon">❤️</div>
-
-      <h3>Fill The Heart</h3>
-
-    </div>
-
-  </div>
-
+<div class="daily-card reveal" style="margin-top:24px">
+<span class="eyebrow">Today's little reminder</span>
+<p id="dailyMsg">Loading...</p>
 </div>
-
-<!-- Arrow -->
-
-<div class="screen" id="arrowScreen">
-
-  <h1 class="title">Arrow Challenge</h1>
-
-  <p class="subtitle">
-    Match the sequence using keyboard arrows.
-  </p>
-
-  <div class="sequence">
-    ⬆ ⬇ ⬅ ➡
-  </div>
-
-  <div class="progress" id="arrowProgress">
-    Progress: 0 / 4
-  </div>
-
-  <div class="success" id="arrowSuccess">
-    Perfect, your style has a very unfair effect. 😱
-  </div>
-
-  <button id="arrowBtn"
-    style="display:none;margin-top:30px;"
-    onclick="openPaths()">
-
-    Back
-
-  </button>
-
+</div></section>
+<section id="love" class="section"><div class="wrap">
+<div class="title reveal"><div class="eyebrow" style="color:#e34f85">Just for you</div><h2>Things I hope you never forget</h2><p>Some days need a grand gesture. Other days just need a reminder that someone is quietly cheering for you.</p></div>
+<div class="cards">
+<div class="card reveal"><div class="icon">🌷</div><h3>You are enough.</h3><p>You don't have to be perfect, productive, or happy every second. You can simply be you—and that is already more than enough.</p></div>
+<div class="card reveal"><div class="icon">☁️</div><h3>Bad days are allowed.</h3><p>Take a breath. Drink some water. Rest your mind. Tomorrow doesn't need to be solved tonight.</p></div>
+<div class="card reveal"><div class="icon">✨</div><h3>Keep your sparkle.</h3><p>The little things about you—the laugh, the expressions, the tiny habits—are the things that make you wonderfully you.</p></div>
 </div>
+</div></section>
 
-<!-- Memory -->
-
-<div class="screen" id="memoryScreen">
-
-  <h1 class="title">Memory Lights</h1>
-
-  <p class="subtitle">
-    Repeat the glowing sequence.
-  </p>
-
-  <div class="memory-grid">
-
-    <div class="memory-box" data-id="0"></div>
-    <div class="memory-box" data-id="1"></div>
-    <div class="memory-box" data-id="2"></div>
-    <div class="memory-box" data-id="3"></div>
-
+<section class="section" style="padding-top:10px"><div class="wrap note">
+<div class="interaction-grid">
+<div class="interaction reveal" id="hugbox">
+  <div style="font-size:28px">🫂</div>
+  <h2>Send Me a Hug</h2>
+  <p>Press it and imagine Himu running straight into Adi's arms.</p>
+  <div class="stage">
+    <div class="person himu"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="label">Himu</div></div>
+    <div class="person adi"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="label">Adi</div></div>
+    <div class="final-emote">🫂</div>
   </div>
-
-  <div class="success" id="memorySuccess">
-    Beauty with the brain ✨
-  </div>
-
-  <button id="memoryBtn"
-    style="display:none;margin-top:25px;"
-    onclick="openPaths()">
-
-    Back
-
-  </button>
-
+  <div class="action-row"><button class="btn" onclick="sendLove('hug')">Give Me a Hug ♡</button></div>
+  <div class="notify">Right after the animation, you'll get the option to notify Adi over WhatsApp, SMS, or by copying the message.</div>
 </div>
-
-<!-- Star -->
-
-<div class="screen" id="starScreen">
-
-  <h1 class="title">Find the Hidden Star</h1>
-
-  <p class="subtitle">
-    Somewhere on the screen.
-  </p>
-
-  <div class="star-area">
-
-    <div class="hidden-star"
-      id="hiddenStar">
-
-      ⭐
-
-    </div>
-
+<div class="interaction reveal" id="kissbox">
+  <div style="font-size:28px">💋</div>
+  <h2>Send Me a Kiss</h2>
+  <p>A tiny kiss travelling all the way from Himu to Adi.</p>
+  <div class="stage">
+    <div class="person himu"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="label">Himu</div></div>
+    <div class="person adi"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="label">Adi</div></div>
+    <div class="final-emote">💋</div>
   </div>
-
-  <div class="success" id="starSuccess">
-    If elegance had a personality, it would probably sound a lot like you. 😍
-  </div>
-
-  <button id="starBtn"
-    style="display:none;margin-top:20px;"
-    onclick="openPaths()">
-
-    Back
-
-  </button>
-
+  <div class="action-row"><button class="btn" onclick="sendLove('kiss')">Send Me a Kiss 😘</button></div>
+  <div class="notify">Right after the animation, you'll get the option to notify Adi over WhatsApp, SMS, or by copying the message.</div>
 </div>
-
-<!-- HEART -->
-
-<div class="screen" id="heartRestoreScreen">
-
-  <h1 class="title">Fill the Heart</h1>
-
-  <p class="subtitle">
-    Catch floating pieces to slowly fill the heart.
-  </p>
-
-  <div class="heart-game-area">
-
-    <div class="heart-container">
-
-      <svg viewBox="0 0 200 200" class="heart-svg">
-
-        <!-- Border -->
-
-        <path
-          d="M100 180
-             L20 100
-             A40 40 0 1 1 100 50
-             A40 40 0 1 1 180 100 Z"
-
-          fill="white"
-          stroke="black"
-          stroke-width="6"
-        />
-
-        <!-- Fill -->
-
-        <clipPath id="heartClip">
-
-          <path
-            d="M100 180
-               L20 100
-               A40 40 0 1 1 100 50
-               A40 40 0 1 1 180 100 Z"
-          />
-
-        </clipPath>
-
-        <rect
-          id="heartFill"
-          x="0"
-          y="200"
-          width="200"
-          height="0"
-          fill="#ff4d6d"
-          clip-path="url(#heartClip)"
-        />
-
-      </svg>
-
-    </div>
-
-  </div>
-
-  <div class="progress" id="heartProgress">
-    Filled: 0%
-  </div>
-
 </div>
+<div id="notes" class="paper reveal"><h3>A little note for you 💌</h3>
+<p>Hey Himu,</p><p>Just a small reminder that you are one of the sweetest parts of my days. I may not always have the perfect words, but I hope you always know that I care about your smile, your peace, and your dreams.</p><p>So whenever you're angry, tired, stressed, or just missing me a little—come back here. Consider this your tiny corner where you can always find a hug.</p><p style="text-align:right;font-style:italic">Always yours,<br><strong>Aditya ♡</strong></p></div>
+</div></section>
 
-<!-- MOON POPUP -->
+<section id="games" class="section"><div class="wrap">
+<div class="title reveal"><div class="eyebrow" style="color:#e34f85">Play with me</div><h2>A little happiness arcade 🎮</h2><p>No high scores needed. The only rule is: smile.</p></div>
+<div class="games">
+<div class="game reveal"><h3>💗 Catch the Hearts</h3><p>Click the falling hearts before they disappear. Let's see your score!</p><div class="heart-field" id="field"></div><p><strong>Score: <span id="score">0</span></strong></p><button class="btn" onclick="startHearts()">Start game</button></div>
+<div class="game reveal quiz"><h3>💕 Love Quiz</h3><p>Which one is the best emergency medicine?</p><button onclick="quiz('wrong')">A lecture</button><button onclick="quiz('wrong')">A nap</button><button onclick="quiz('right')">A hug from Adi</button><p id="quizresult"></p></div>
+<div class="game reveal memory"><h3>🃏 Tiny Memory Game</h3><p>Find matching pairs.</p><div id="memory"></div><p id="memresult"></p><button class="btn" onclick="newMemory()">Shuffle</button></div>
+<div class="game reveal"><h3>🌙 Make a Wish</h3><p>Close your eyes for three seconds, make a tiny wish, then press the button.</p><button class="btn" onclick="wish()">I made my wish ✨</button><p id="wish"></p></div>
+</div></div></section>
 
-<div class="screen" id="moonScreen">
+<section id="little" class="section"><div class="wrap"><div class="title reveal"><h2>Reasons to smile today 🌸</h2><p>Tap any card. Each one opens a little message from Adi.</p></div>
+<div class="reasons">
+<button class="reason reveal" onclick="reason(0)">You deserve a peaceful evening. 🌙</button>
+<button class="reason reveal" onclick="reason(1)">Someone is proud of you. 🫶</button>
+<button class="reason reveal" onclick="reason(2)">Your smile is dangerously cute. 😌</button>
+<button class="reason reveal" onclick="reason(3)">You are allowed to slow down. ☕</button>
+</div></div></section>
 
-  <div class="moon-popup">
-
-    <div class="moon-corner">
-      🌙❤️
-    </div>
-
-    <h1 class="moon-title">
-
-      100% Filled ❤️
-
-    </h1>
-
-    <p class="moon-question">
-
-      Moon is beautiful, isn't it?
-
-    </p>
-
-    <div class="moon-buttons">
-
-      <button onclick="sendChoice('Yes it is true')">
-
-        Yes it is true ✨
-
-      </button>
-
-      <button onclick="sendChoice('No it is not true')">
-
-        No it is not true 🌙
-
-      </button>
-
-      <button onclick="sendChoice('Will see and tell later')">
-
-        Will see and tell later 🙂
-
-      </button>
-
-    </div>
-
-    <div id="responseMessage"></div>
-
-    <button
-      id="heartRestoreBtn"
-      style="display:none;margin-top:25px;"
-      onclick="openFinal()">
-
-      Continue
-
-    </button>
-
-  </div>
-
-</div>
-
-<!-- Final -->
-
-<div class="screen" id="finalScreen">
-
-  <div class="final-box">
-
-    <h1>✨ Himanshi ✨</h1>
-
-    <p>
-
-      Thanks for spending time here.<br><br>
-
-      Some people leave a genuinely
-      good impression without trying.<br><br>
-
-      You are one of them 🌸<br><br>
-
-      — Made specially for you
-
-    </p>
-
-  </div>
-
-</div>
+<footer class="footer"><strong>Made with too much love by Aditya ♡</strong><p>For Himanshi — my Himu, my betu, my jaan, my sweetheart.</p><p>And yes... this little website is always on your side. 💗</p></footer>
 
 <script src="script.js"></script>
-
+<div id="toast" class="toast"></div>
+<div class="modal" id="reasonModal" onclick="if(event.target===this)closeReason()"><div class="modal-box"><div style="font-size:42px">💗</div><h3 id="reasonTitle"></h3><p id="reasonText" style="line-height:1.8;font-size:17px"></p><button class="btn" onclick="closeReason()">Keep smiling ♡</button></div></div>
+<div class="modal notify-modal" id="notifyModal" onclick="if(event.target===this)closeNotify()"><div class="modal-box">
+<div style="font-size:38px" id="notifyIcon">💗</div>
+<h3>Let Adi know?</h3>
+<p style="font-size:15px;color:#765b70;margin-bottom:4px" id="notifyMsgPreview"></p>
+<button class="btn" id="notifyWa">Send via WhatsApp</button>
+<button class="btn alt" id="notifySms">Send via SMS</button>
+<button class="btn alt" id="notifyCopy">Copy message instead</button>
+<button class="btn alt" onclick="closeNotify()" style="background:transparent;box-shadow:none;color:#a3899e">Maybe later</button>
+</div></div>
+<button class="fab" onclick="surprise()" title="Tap for a surprise ♡" aria-label="Surprise me">✨</button>
 </body>
 </html>
